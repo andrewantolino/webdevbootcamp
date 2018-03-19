@@ -1,13 +1,15 @@
-const app 		 = require('express')(),
+const express	   = require('express'),
+			app 		 	 = express(),
       bodyParser = require('body-parser'),
       mongoose   = require('mongoose'),
       Campground = require('./models/campground'),
       Comment 	 = require('./models/comment'),
-      seedDB	 = require('./seeds');
+      seedDB	   = require('./seeds');
 
 mongoose.connect('mongodb://localhost/yelp-camp');
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'pug');
+app.use(express.static(__dirname + "/public"));
 // seedDB();
 
 app.get('/', (req, res) => {
