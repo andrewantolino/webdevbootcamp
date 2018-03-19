@@ -1,0 +1,19 @@
+extends layout
+
+block header
+
+block content
+	.ui.main.text.container.segment
+		.ui.huge.header
+			| New Blog
+		form.ui.form(action='/blogs' method='POST')
+			.field
+				label Title
+				input(type='text' name='blog[title]' placeholder='title')
+			.field
+				label Image
+				input(type='text' name='blog[image]' placeholder='image')
+			.field
+				laebel Blog Content
+				textarea(name='blog[body]' placeholder='body')
+			input.ui.green.big.basic.button(type='submit')

@@ -1,0 +1,18 @@
+extends layout
+
+block head
+	title New Campground
+
+block content
+	.container
+		.row
+			h1(style="text-align: center") Create a new Campground
+			div(style="width: 30%; margin: 25px auto;")
+				form(action='/campgrounds' method='POST')
+					.form-group
+						input.form-control(type='text' placeholder='name' name='name')
+					.form-group
+						input.form-control(type='text' placeholder='image url' name='image')
+					.form-group
+						input.btn.btn-lg.btn-primary.btn-block(type='submit')
+				a(href='/campgrounds') Go back

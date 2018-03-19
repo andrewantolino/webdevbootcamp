@@ -1,8 +1,8 @@
-function echo(str, num){
-    for(var i = 1; i <= num; i++){
-        console.log(str);
-    }
+function echo(msg, repeats) {
+  for(var i = 0; i < repeats; i++) {
+    console.log(msg);
+  }
 }
 
-echo("Echo!!!", 10) //should print "Echo!!!" 10 times
-echo("Tater Tots", 3) //should print "Tater Tots" 3 times
+echo("Echo!!!", 10);
+echo("Tater Tots", 3);

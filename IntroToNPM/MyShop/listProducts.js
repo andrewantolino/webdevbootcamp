@@ -1,10 +1,11 @@
-var faker = require("faker");
+const faker = require('faker');
 
 console.log("====================");
-console.log("WELCOME TO MY SHOP");
+console.log("WELCOME TO MY SHOP!");
 console.log("====================");
 
-for(var i = 0; i < 10; i++){
-    console.log(faker.commerce.productName() + " - $" + faker.commerce.price());
+var i = 0;
+while (i <= 10) {
+	console.log(`${faker.commerce.productName()} - $${faker.commerce.price()}`);
+	i++;
 }
-

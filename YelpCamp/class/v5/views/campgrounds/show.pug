@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+	.container
+		.row
+			.col-xs-3
+				p.lead YelpCamp
+				.list-group
+					li.list-group-item.active Info 1
+					li.list-group-item Info 2
+					li.list-group-item Info 3
+			.col-xs-9
+	h1= campground.name
+
+	img(src=campground.image)
+	p= campground.description
+
+	p
+		a(href="/campgrounds/"+campground._id+"/comments/new" class="btn btn-success") Add new comment
+	each comment in campground.comments
+		p
+			strong= `${comment.author}`
+			= ` - ${comment.text}`

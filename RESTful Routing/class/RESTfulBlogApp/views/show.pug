@@ -1,0 +1,18 @@
+extends layout
+
+block header
+
+block content
+	.ui.main.text.container
+		.ui.huge.header= blog.title
+		.ui.top.attached.segment
+			.item
+				img.ui.centered.rounded.image(src=blog.image)
+				.content
+					span= blog.created.toDateString()
+				.description
+					p !{blog.body}
+			a(href=`/blogs/${blog._id}/edit`).ui.orange.basic.button Edit
+			form#delete(action=`/blogs/${blog._id}?_method=DELETE` method='POST')
+				button.ui.red.basic.button Delete
+			

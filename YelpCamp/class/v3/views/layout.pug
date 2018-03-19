@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+	head
+		block head
+		title YelpCamp
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+	body
+		nav.navbar.navbar-default
+			.container-fluid
+				.navbar-header
+					a.navbar-brand(href='/') YelpCamp
+				.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href='/') Login
+						li
+							a(href='/') Sign Up
+						li
+							a(href='/') Logout
+		block content

@@ -1,0 +1,8 @@
+h1 Results Page
+
+ul
+	each movie in data.Search
+		li 
+			strong=`${movie.Title}` 
+			= `- ${movie.Year}`
+a(href="/") Search Again

@@ -1,0 +1,15 @@
+html
+	head
+		title Blog App
+		link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.css')
+		link(rel='stylesheet' type='text/css' href='/css/style.css')
+		block header
+	body
+		.ui.fixed.inverted.menu
+			.ui.container
+				.header.item
+					i.code.icon
+					|Blog Site
+				a.item(href='/') Home
+				a.item(href='/blogs/new') New Post
+		block content

@@ -1,0 +1,23 @@
+extends layout
+
+block header
+
+block content
+	.ui.main.text.container
+		.ui.huge.header
+			h1 RESTful Blog App
+		.ui.top.attached.segment
+			.ui.divided.items
+				each blog in blogs
+					.item
+						.image
+							img(src=blog.image)
+						.content
+							a.header(href='/blogs/' + blog._id)= blog.title
+							.meta
+								span= blog.created.toDateString()
+							.description
+								p !{blog.body.substring(0, 100)} + '...'
+							.extra
+								a.ui.floated.basic.blue.button(href='/blogs/' + blog._id) Read more
+									i.right.chevron.icon

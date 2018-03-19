@@ -1,0 +1,7 @@
+API Key for Web Developer Bootcamp Movie DB App:
+
+*Key*: &apikey=thewdb
+
+_General search_: http://www.omdbapi.com/?s=guardians+of+the+galaxy&apikey=thewdb
+
+_Search movie with ID_: http://www.omdbapi.com/?i=tt3896198&apikey=thewdb
