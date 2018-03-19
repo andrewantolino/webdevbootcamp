@@ -10,14 +10,20 @@ block content
 					li.list-group-item Info 2
 					li.list-group-item Info 3
 			.col-xs-9
-	h1= campground.name
-
-	img(src=campground.image)
-	p= campground.description
-
-	p
-		a(href="/campgrounds/"+campground._id+"/comments/new" class="btn btn-success") Add new comment
-	each comment in campground.comments
-		p
-			strong= `${comment.author}`
-			= ` - ${comment.text}`
+				.thumbnail
+					img.img-responsive(src=campground.image)
+					.caption-full
+						h4.pull-right $9.00/night
+						h4 
+							a= campground.name
+						p= campground.description
+				.well
+					.text-right
+						a(href="/campgrounds/"+campground._id+"/comments/new" class="btn btn-success") Add new comment
+					hr
+					each comment in campground.comments
+						.row
+							.col-xs-12
+								strong=`${comment.author}`
+								span.pull-right 10 days ago
+								p= `${comment.text}`
